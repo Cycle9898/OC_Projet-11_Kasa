@@ -12,20 +12,19 @@ body {
     min-width: 375px;
     max-width: 1440px;
     margin: auto;
-    padding: 0 100px;
     font-family: $main-font;
+}
 
-    @include for-device(tablet) {
-        padding: 0 50px;
-    }
-
-    @include for-device(mobile) {
-        padding: 0 20px;
-    }
+div,
+p,
+h1,
+h2 {
+    margin: 0;
 }
 
 //Components
 
 @import './components/header';
+@import './components/footer';
 
 //Pages

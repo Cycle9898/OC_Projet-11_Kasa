@@ -4,15 +4,20 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 40px;
+    padding: 40px 100px 0;
+    color: $main-color;
+
+    @include for-device(tablet) {
+        padding: 40px 50px 0;
+    }
 
     @include for-device(mobile) {
-        padding-top: 20px;
+        padding: 20px 20px 0;
     }
 
     svg {
-        color: $main-color;
         width: 210px;
+        height: auto;
 
         @include for-device(mobile) {
             width: 145px;
@@ -28,9 +33,9 @@ header {
         }
 
         .nav-link {
-            color: $main-color;
             @include font-set(1.5em, 500);
             text-decoration: none;
+            color: $main-color;
 
             @include for-device(mobile) {
                 font-size: 0.75em;

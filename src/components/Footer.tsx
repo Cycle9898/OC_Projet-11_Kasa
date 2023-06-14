@@ -1,6 +1,9 @@
+import MainLogo from "./MainLogo";
+
 function Footer() {
     return (<footer>
-        <p>footer</p>
+        <MainLogo />
+        <p>© 2020 Kasa. All rights reserved</p>
     </footer>);
 }
 

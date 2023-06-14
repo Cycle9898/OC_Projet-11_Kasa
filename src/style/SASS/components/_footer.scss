@@ -1,0 +1,29 @@
+/* Footer */
+
+footer {
+    height: 200px;
+    background-color: black;
+    color: white;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+
+    @include for-device(mobile) {
+        gap: 25px;
+    }
+
+    svg {
+        width: 120px;
+        height: auto;
+    }
+
+    p {
+        @include font-set(1.5em, 500);
+
+        @include for-device(mobile) {
+            font-size: 0.75em;
+        }
+    }
+}
