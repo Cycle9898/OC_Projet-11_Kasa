@@ -1,0 +1,31 @@
+//Variables
+@import './utils/variables';
+
+//Mixins
+@import './utils/mixins';
+
+/*Global settings*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+body {
+    min-width: 375px;
+    max-width: 1440px;
+    margin: auto;
+    padding: 0 100px;
+    font-family: $main-font;
+
+    @include for-device(tablet) {
+        padding: 0 50px;
+    }
+
+    @include for-device(mobile) {
+        padding: 0 20px;
+    }
+}
+
+//Components
+
+@import './components/header';
+
+//Pages

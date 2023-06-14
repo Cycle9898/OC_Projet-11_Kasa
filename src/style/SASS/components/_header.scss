@@ -1,0 +1,44 @@
+/* Header */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 40px;
+
+    @include for-device(mobile) {
+        padding-top: 20px;
+    }
+
+    svg {
+        color: $main-color;
+        width: 210px;
+
+        @include for-device(mobile) {
+            width: 145px;
+        }
+    }
+
+    nav {
+        display: flex;
+        gap: 50px;
+
+        @include for-device(mobile) {
+            gap: 10px;
+        }
+
+        .nav-link {
+            color: $main-color;
+            @include font-set(1.5em, 500);
+            text-decoration: none;
+
+            @include for-device(mobile) {
+                font-size: 0.75em;
+            }
+
+            &--active {
+                text-decoration: underline;
+            }
+        }
+    }
+}
