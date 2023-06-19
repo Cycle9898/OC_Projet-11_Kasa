@@ -15,16 +15,18 @@ body {
     font-family: $main-font;
 }
 
-div,
-p,
-h1,
-h2 {
-    margin: 0;
+.error-msg {
+    font-size: 1.5em;
+    color: red;
 }
 
 //Components
 
 @import './components/header';
 @import './components/footer';
+@import './components/banner';
+@import './components/housing-card';
 
 //Pages
+
+@import './pages/home';

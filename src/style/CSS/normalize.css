@@ -382,10 +382,11 @@ template {
 /*******************************Personal edits***********************************/
 /********************************************************************************/
 
-/*Add box-sizing on all elements*/
+/*Add box-sizing and remove margin on all elements*/
 
 * {
   box-sizing: border-box;
+  margin: 0;
 }
 
 /*Apply project font familly on all buttons*/

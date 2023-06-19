@@ -1,0 +1,40 @@
+.banner {
+    height: 225px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 25px;
+
+    @include for-device(mobile) {
+        border-radius: 10px;
+    }
+
+    &--home {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(../../../assets/image/Home/home-banner-bg.jpg);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include for-device(tablet) {
+            height: 170px;
+        }
+
+        @include for-device(mobile) {
+            height: 110px;
+            padding: 0 15px;
+        }
+
+        h1 {
+            color: white;
+            @include font-set(3em, 500);
+
+            @include for-device(tablet) {
+                font-size: 2.2em;
+            }
+
+            @include for-device(mobile) {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
