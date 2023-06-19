@@ -9,14 +9,14 @@ function Home() {
     //Banner's title text content
     const TitleText: string = "Chez vous, partout et ailleurs";
 
-    return (<main>
+    return (<main className="main-home">
         <Banner page="home" text={TitleText} />
 
         <section className="housing-offers">
-            {error ?
-                (<p className="error-msg">Oups! Suite à une erreur, les données des logements n'ont pu être chargées.</p>)
-                :
-                (<ul className="housing-offers__list">
+            {error ? (
+                <p className="error-msg">Oups! Suite à une erreur, les données des logements n'ont pu être chargées.</p>
+            ) : (
+                <ul className="housing-offers__list">
                     {dataArray.map((housingOffer) => <li key={housingOffer.id}>
                         <HousingCard
                             offerID={housingOffer.id}
@@ -24,7 +24,8 @@ function Home() {
                             offerCover={housingOffer.cover}
                         />
                     </li>)}
-                </ul>)
+                </ul>
+            )
             }
         </section>
     </main>);
