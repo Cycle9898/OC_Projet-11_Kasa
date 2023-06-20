@@ -1,0 +1,59 @@
+.collapse {
+    &__title {
+        background-color: $main-color;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        min-height: 50px;
+
+        @include for-device(mobile) {
+            padding: 0 10px;
+            min-height: 30px;
+        }
+
+        img {
+            width: 24px;
+            height: auto;
+
+            @include for-device(mobile) {
+                width: 16px;
+            }
+        }
+
+        &--about {
+            border-radius: 5px;
+
+            h2 {
+                @include font-set(1.5em, 500);
+
+                @include for-device(mobile) {
+                    font-size: 0.8125em;
+                }
+            }
+        }
+    }
+
+    &__content {
+        background-color: $bg-color;
+        color: $main-color;
+
+        &--about {
+            border-radius: 5px;
+            padding: 30px 20px 15px;
+
+            @include for-device(mobile) {
+                padding: 15px 10px 50px;
+            }
+
+            p {
+                @include font-set(1.5em, 400);
+
+                @include for-device(mobile) {
+                    font-size: 0.75em;
+                }
+            }
+        }
+    }
+}

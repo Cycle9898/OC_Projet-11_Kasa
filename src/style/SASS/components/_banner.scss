@@ -37,4 +37,8 @@
             }
         }
     }
+
+    &--about {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url(../../../assets/image/About/about-banner-bg.jpg);
+    }
 }

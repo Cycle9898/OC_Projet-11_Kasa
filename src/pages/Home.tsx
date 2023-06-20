@@ -17,13 +17,15 @@ function Home() {
                 <p className="error-msg">Oups! Suite à une erreur, les données des logements n'ont pu être chargées.</p>
             ) : (
                 <ul className="housing-offers__list">
-                    {dataArray.map((housingOffer) => <li key={housingOffer.id}>
-                        <HousingCard
-                            offerID={housingOffer.id}
-                            offerTitle={housingOffer.title}
-                            offerCover={housingOffer.cover}
-                        />
-                    </li>)}
+                    {dataArray.map((housingOffer) => {
+                        return (<li key={housingOffer.id}>
+                            <HousingCard
+                                offerID={housingOffer.id}
+                                offerTitle={housingOffer.title}
+                                offerCover={housingOffer.cover}
+                            />
+                        </li>);
+                    })}
                 </ul>
             )
             }

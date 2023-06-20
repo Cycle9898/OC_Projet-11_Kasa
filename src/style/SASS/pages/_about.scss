@@ -1,0 +1,28 @@
+.main-about {
+    padding: 50px 100px 200px;
+
+    @include for-device(tablet) {
+        padding: 35px 50px 185px;
+    }
+
+    @include for-device(mobile) {
+        padding: 20px 20px 170px;
+    }
+
+    .collapses-section {
+        margin-top: 30px;
+        padding: 0 100px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 30px;
+
+        @include for-device(tablet) {
+            padding: 0;
+        }
+
+        @include for-device(mobile) {
+            margin-top: 20px;
+            row-gap: 20px;
+        }
+    }
+}
