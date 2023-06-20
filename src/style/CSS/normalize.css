@@ -41,7 +41,6 @@ main {
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
 }
 
 /* Grouping content
@@ -381,6 +380,8 @@ template {
 /********************************************************************************/
 /*******************************Personal edits***********************************/
 /********************************************************************************/
+
+/* Don't forget to change h1 tag margin in newer versions */
 
 /*Add box-sizing and remove margin on all elements*/
 
