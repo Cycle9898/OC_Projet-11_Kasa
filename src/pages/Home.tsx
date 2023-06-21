@@ -1,35 +1,42 @@
-import { useFetchData,HousingData } from "../utils/hooks";
+import { useFetchData } from "../utils/hooks";
+import LoadingSpinner from "../components/LoadingSpinner";
 import Banner from '../components/Banner';
 import HousingCard from "../components/HousingCard";
 
 function Home() {
-    //Fetch mocked data and error state with custom hook
-    const { dataArray,error }: { dataArray: HousingData[],error: boolean } = useFetchData('http://localhost:3000/data/logements.json');
+    //Fetch mocked data, error and loading state with custom hook
+    const { dataArray,error,isDataLoading } = useFetchData('http://localhost:3000/data/logements.json');
 
     //Banner's title text content
     const TitleText: string = "Chez vous, partout et ailleurs";
 
     return (<main className="main-home">
-        <Banner page="home" text={TitleText} />
+        {isDataLoading ? (
+            <LoadingSpinner />
+        ) : (
+            <>
+                <Banner page="home" text={TitleText} />
 
-        <section className="housing-offers">
-            {error ? (
-                <p className="error-msg">Oups! Suite à une erreur, les données des logements n'ont pu être chargées.</p>
-            ) : (
-                <ul className="housing-offers__list">
-                    {dataArray.map((housingOffer) => {
-                        return (<li key={housingOffer.id}>
-                            <HousingCard
-                                offerID={housingOffer.id}
-                                offerTitle={housingOffer.title}
-                                offerCover={housingOffer.cover}
-                            />
-                        </li>);
-                    })}
-                </ul>
-            )
-            }
-        </section>
+                <section className="housing-offers">
+                    {error ? (
+                        <p className="error-msg">Oups! Suite à une erreur, les données des logements n'ont pu être chargées.</p>
+                    ) : (
+                        <ul className="housing-offers__list">
+                            {dataArray.map((housingOffer) => {
+                                return (<li key={housingOffer.id}>
+                                    <HousingCard
+                                        offerID={housingOffer.id}
+                                        offerTitle={housingOffer.title}
+                                        offerCover={housingOffer.cover}
+                                    />
+                                </li>);
+                            })}
+                        </ul>
+                    )
+                    }
+                </section>
+            </>
+        )}
     </main>);
 }
 

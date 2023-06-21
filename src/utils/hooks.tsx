@@ -20,8 +20,13 @@ export function useFetchData(url: string) {
     //to store API or mocked error state
     const [error,setError] = useState<boolean>(false);
 
+    //to store if the loading spinner needs to appear or not
+    const [isDataLoading,setDataLoading] = useState<boolean>(false)
+
     useEffect(() => {
         if (!url) { return; }
+
+        setDataLoading(true);
 
         function fetchData(): void {
             fetch(url)
@@ -31,10 +36,17 @@ export function useFetchData(url: string) {
                     setError(true);
                     console.log(error);
                 });
+            setDataLoading(false);
         }
 
-        fetchData();
+        //Check if mocked data are used and, if needed, simulate network latency to show loading spinner
+        if (url.startsWith("http://localhost:3000")) {
+            setTimeout(fetchData,300);
+        } else {
+            fetchData();
+        }
+
     },[url])
 
-    return { dataArray,error };
+    return { dataArray,error,isDataLoading };
 }
