@@ -13,10 +13,10 @@ function Collapse({ page,title,textContent }: Props) {
     const [isOpen,setIsOpen] = useState<boolean>(false);
 
     //Change the opening state of the collapsed element
-    const handleCollapseOpening = (previousState: boolean) => setIsOpen(!previousState);
+    const handleCollapseOpening = () => setIsOpen((previousState: boolean) => !previousState);
 
     return (<article className={`collapse collapse--${page}`} >
-        <div className={`collapse__title collapse__title--${page}`} onClick={() => handleCollapseOpening(isOpen)}>
+        <div className={`collapse__title collapse__title--${page}`} onClick={handleCollapseOpening}>
             <h2>{title}</h2>
             <div>
                 <img src={isOpen ? chevronUp : chevronDown} alt="" />

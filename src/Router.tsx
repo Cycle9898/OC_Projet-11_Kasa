@@ -39,8 +39,12 @@ const defineRoutes = createBrowserRouter([
         element: <About />
       },
       {
-        path: "*",
+        path: "/error",
         element: <ErrorPage />
+      },
+      {
+        path: "*",
+        element: <Navigate to="/error" replace />
       }
     ]
   }

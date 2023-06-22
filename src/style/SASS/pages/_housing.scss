@@ -1,0 +1,17 @@
+/* Housing Page */
+
+.main-housing {
+    padding: 25px 100px 25px;
+
+    @include for-device(tablet) {
+        padding: 25px 50px 25px;
+    }
+
+    @include for-device(mobile) {
+        padding: 25px 20px 65px;
+    }
+
+    .error-msg {
+        margin-bottom: 600px;
+    }
+}
