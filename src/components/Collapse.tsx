@@ -15,7 +15,7 @@ function Collapse({ page,title,textContent }: Props) {
     //Change the opening state of the collapsed element
     const handleCollapseOpening = () => setIsOpen((previousState: boolean) => !previousState);
 
-    return (<article className={`collapse collapse--${page}`} >
+    return (<article className="collapse" >
         <div className={`collapse__title collapse__title--${page}`} onClick={handleCollapseOpening}>
             <h2>{title}</h2>
             <div>

@@ -15,3 +15,125 @@
         margin-bottom: 600px;
     }
 }
+
+.general-infos-section {
+    margin: 25px 0;
+    color: $main-color;
+    display: flex;
+    justify-content: space-between;
+
+    @include for-device(tablet) {
+        margin: 15px 0;
+        flex-direction: column;
+        justify-content: unset;
+        gap: 15px;
+    }
+}
+
+.housing-left-part {
+    h1 {
+        @include font-set(2.25em, 500);
+        line-height: 142.6%;
+
+        @include for-device(tablet) {
+            font-size: 1.7em;
+        }
+
+        @include for-device(mobile) {
+            font-size: 1.125em;
+            margin-bottom: 5px;
+        }
+    }
+
+    >p {
+        @include font-set(1.125em, 500);
+        margin-bottom: 20px;
+
+        @include for-device(tablet) {
+            font-size: 1em;
+        }
+
+        @include for-device(mobile) {
+            font-size: 0.875em;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+.housing-right-part {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include for-device(tablet) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        gap: unset;
+    }
+
+    &__rating {
+        white-space: nowrap;
+
+        svg {
+            height: 36px;
+            width: 36px;
+
+            @include for-device(mobile) {
+                height: 18px;
+                width: 18px;
+            }
+        }
+    }
+
+    .housing-host {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10px;
+
+        &__name {
+            width: min-content;
+            text-align: end;
+            @include font-set(1.125em, 500);
+            line-height: 142.6%;
+
+            @include for-device(mobile) {
+                font-size: 0.75em;
+            }
+        }
+
+        &__pic {
+            height: 65px;
+            width: 65px;
+
+            @include for-device(mobile) {
+                height: 35px;
+                width: 35px;
+            }
+
+            img {
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+.spec-infos-section {
+    display: flex;
+    gap: 75px;
+
+    @include for-device(tablet) {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

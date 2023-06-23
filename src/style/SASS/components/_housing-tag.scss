@@ -1,0 +1,28 @@
+/* Housing Tag */
+
+.housing-tag {
+    background-color: $main-color;
+    border-radius: 10px;
+    width: fit-content;
+    min-width: 115px;
+    height: 25px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include for-device(mobile) {
+        border-radius: 5px;
+        min-width: 85px;
+        height: 20px;
+    }
+
+    &__text {
+        @include font-set(0.875em, 500);
+        color: white;
+
+        @include for-device(mobile) {
+            font-size: 0.625em;
+        }
+    }
+}

@@ -3,6 +3,9 @@ import { HousingData,useFetchData } from "../utils/hooks";
 import LoadingSpinner from "../components/LoadingSpinner";
 import { useEffect,useState } from "react";
 import Slideshow from "../components/Slideshow";
+import Collapse from "../components/Collapse";
+import HousingTag from "../components/HousingTag";
+import StarRating from "../components/StarRating";
 
 function Housing() {
     //Retrieve housing ID in URL params
@@ -43,6 +46,38 @@ function Housing() {
                     pictureArray={currentHousingData.pictures}
                     housingTitle={currentHousingData.title}
                 />
+
+                <section className="general-infos-section">
+                    <div className="housing-left-part">
+                        <h1>{currentHousingData.title}</h1>
+
+                        <p>{currentHousingData.location}</p>
+
+                        <div className="housing-left-part__tags">
+                            {currentHousingData.tags.map((tag,index) => <HousingTag key={index} tag={tag} />)}
+                        </div>
+                    </div>
+
+                    <div className="housing-right-part">
+                        <div className="housing-host">
+                            <span className="housing-host__name">{currentHousingData.host.name}</span>
+
+                            <span className="housing-host__pic">
+                                <img src={currentHousingData.host.picture} alt={currentHousingData.host.name} />
+                            </span>
+                        </div>
+
+                        <div className="housing-right-part__rating">
+                            <StarRating rating={currentHousingData.rating} />
+                        </div>
+                    </div>
+                </section>
+
+                <section className="spec-infos-section">
+                    <Collapse page="housing" title="Description" textContent={currentHousingData.description} />
+
+                    <Collapse page="housing" title="Équipements" textContent={currentHousingData.equipments} />
+                </section>
             </>
         )}
     </main>);
