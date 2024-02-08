@@ -1,80 +1,80 @@
 /* Slideshow */
 
 .ss-section {
-    &__slideshow {
-        height: 415px;
-        position: relative;
+	&__slideshow {
+		height: 415px;
+		position: relative;
 
-        @include for-device(tablet) {
-            height: 335px;
-        }
+		@include for-device(tablet) {
+			height: 335px;
+		}
 
-        @include for-device(mobile) {
-            height: 255px;
-        }
+		@include for-device(mobile) {
+			height: 255px;
+		}
 
-        >img {
-            border-radius: 25px;
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
+		> img {
+			border-radius: 25px;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
 
-            @include for-device(mobile) {
-                border-radius: 10px;
-            }
-        }
-    }
+			@include for-device(mobile) {
+				border-radius: 10px;
+			}
+		}
+	}
 }
 
 .ss-commands {
-    z-index: 1;
-    position: absolute;
-    height: calc(50% + (40px - 25px));
-    bottom: 25px;
-    left: 25px;
-    right: 25px;
-    display: flex;
-    justify-content: space-between;
+	z-index: 1;
+	position: absolute;
+	height: calc(50% + (40px - 25px));
+	bottom: 25px;
+	left: 25px;
+	right: 25px;
+	display: flex;
+	justify-content: space-between;
 
-    @include for-device(tablet) {
-        height: calc(50% + (25px - 20px));
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-    }
+	@include for-device(tablet) {
+		height: calc(50% + (25px - 20px));
+		bottom: 20px;
+		left: 20px;
+		right: 20px;
+	}
 
-    @include for-device(mobile) {
-        height: calc(50% + 12.5px);
-        bottom: 0;
-        left: 15px;
-        right: 15px;
-    }
+	@include for-device(mobile) {
+		height: calc(50% + 12.5px);
+		bottom: 0;
+		left: 15px;
+		right: 15px;
+	}
 
-    &__previous,
-    &__next {
-        cursor: pointer;
+	&__previous,
+	&__next {
+		cursor: pointer;
 
-        img {
-            width: auto;
-            height: 80px;
+		img {
+			width: auto;
+			height: 80px;
 
-            @include for-device(tablet) {
-                height: 50px;
-            }
+			@include for-device(tablet) {
+				height: 50px;
+			}
 
-            @include for-device(mobile) {
-                height: 25px;
-            }
-        }
-    }
+			@include for-device(mobile) {
+				height: 25px;
+			}
+		}
+	}
 
-    &__counter {
-        color: white;
-        @include font-set(1.125em, 500);
-        align-self: flex-end;
+	&__counter {
+		color: white;
+		@include font-set(1.125em, 500);
+		align-self: flex-end;
 
-        @include for-device(mobile) {
-            display: none;
-        }
-    }
+		@include for-device(mobile) {
+			display: none;
+		}
+	}
 }

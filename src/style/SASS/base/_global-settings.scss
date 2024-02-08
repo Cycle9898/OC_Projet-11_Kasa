@@ -1,16 +1,20 @@
 /*Global settings*/
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
 
 body {
-    min-width: 375px;
-    max-width: 1440px;
-    margin: auto;
-    font-family: $main-font;
+	min-width: 375px;
+	max-width: 1440px;
+	margin: auto;
+	font-family: $main-font;
+}
+
+main {
+	min-height: 100vh;
 }
 
 .error-msg {
-    font-size: 1.5em;
-    color: red;
-    text-align: center;
+	font-size: 1.5em;
+	color: red;
+	text-align: center;
 }

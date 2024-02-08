@@ -1,49 +1,49 @@
 /* Header */
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 100px 0;
-    color: $main-color;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px 100px 0;
+	color: $main-color;
 
-    @include for-device(tablet) {
-        padding: 40px 50px 0;
-    }
+	@include for-device(tablet) {
+		padding: 40px 50px 0;
+	}
 
-    @include for-device(mobile) {
-        padding: 20px 20px 0;
-    }
+	@include for-device(mobile) {
+		padding: 20px 20px 0;
+	}
 
-    svg {
-        width: 210px;
-        height: auto;
+	svg {
+		width: 210px;
+		height: auto;
 
-        @include for-device(mobile) {
-            width: 145px;
-        }
-    }
+		@include for-device(mobile) {
+			width: 145px;
+		}
+	}
 
-    nav {
-        display: flex;
-        gap: 50px;
+	nav {
+		display: flex;
+		gap: 50px;
 
-        @include for-device(mobile) {
-            gap: 10px;
-        }
+		@include for-device(mobile) {
+			gap: 10px;
+		}
 
-        .nav-link {
-            @include font-set(1.5em, 500);
-            text-decoration: none;
-            color: $main-color;
+		.nav-link {
+			@include font-set(1.5em, 500);
+			text-decoration: none;
+			color: $main-color;
 
-            @include for-device(mobile) {
-                font-size: 0.75em;
-            }
+			@include for-device(mobile) {
+				font-size: 0.75em;
+			}
 
-            &--active {
-                text-decoration: underline;
-            }
-        }
-    }
+			&--active {
+				text-decoration: underline;
+			}
+		}
+	}
 }

@@ -1,11 +1,11 @@
 /* Star Rating */
 
 svg.star-logo {
-    &--full {
-        color: $main-color;
-    }
+	&--full {
+		color: $main-color;
+	}
 
-    &--empty {
-        color: #E3E3E3;
-    }
+	&--empty {
+		color: #e3e3e3;
+	}
 }

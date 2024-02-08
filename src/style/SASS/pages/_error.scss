@@ -1,50 +1,50 @@
 /* Error Page */
 
 .main-error {
-    padding: 100px 100px 150px;
-    color: $main-color;
-    text-align: center;
+	padding: 100px 100px 150px;
+	color: $main-color;
+	text-align: center;
 
-    @include for-device(mobile) {
-        padding: 180px 50px 230px;
-    }
+	@include for-device(mobile) {
+		padding: 180px 50px 230px;
+	}
 
-    h1 {
-        @include font-set(18em, 700);
-        margin-bottom: 20px;
+	h1 {
+		@include font-set(18em, 700);
+		margin-bottom: 20px;
 
-        @include for-device(tablet) {
-            font-size: 12em;
-            margin-bottom: 10px;
-        }
+		@include for-device(tablet) {
+			font-size: 12em;
+			margin-bottom: 10px;
+		}
 
-        @include for-device(mobile) {
-            font-size: 6em;
-            margin-bottom: 0px;
-        }
-    }
+		@include for-device(mobile) {
+			font-size: 6em;
+			margin-bottom: 0px;
+		}
+	}
 
-    h2 {
-        @include font-set(2.25em, 500);
-        margin-bottom: 180px;
+	h2 {
+		@include font-set(2.25em, 500);
+		margin-bottom: 180px;
 
-        @include for-device(tablet) {
-            font-size: 1.75em;
-            margin-bottom: 150px;
-        }
+		@include for-device(tablet) {
+			font-size: 1.75em;
+			margin-bottom: 150px;
+		}
 
-        @include for-device(mobile) {
-            font-size: 1.125em;
-            margin-bottom: 130px;
-        }
-    }
+		@include for-device(mobile) {
+			font-size: 1.125em;
+			margin-bottom: 130px;
+		}
+	}
 
-    a {
-        @include font-set(1.125em, 500);
-        color: $main-color;
+	a {
+		@include font-set(1.125em, 500);
+		color: $main-color;
 
-        @include for-device(mobile) {
-            font-size: 0.875em;
-        }
-    }
+		@include for-device(mobile) {
+			font-size: 0.875em;
+		}
+	}
 }

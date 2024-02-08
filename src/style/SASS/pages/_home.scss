@@ -1,43 +1,43 @@
 /* Home Page */
 
 .main-home {
-    padding: 70px 100px 40px;
+	padding: 70px 100px 40px;
 
-    @include for-device(tablet) {
-        padding: 60px 50px 40px;
-    }
+	@include for-device(tablet) {
+		padding: 60px 50px 40px;
+	}
 
-    @include for-device(mobile) {
-        padding: 20px 20px 20px;
-    }
+	@include for-device(mobile) {
+		padding: 20px 20px 20px;
+	}
 }
 
 .housing-offers {
-    background-color: $bg-color;
-    margin-top: 40px;
-    padding: 50px;
-    border-radius: 25px;
+	background-color: $bg-color;
+	margin-top: 40px;
+	padding: 50px;
+	border-radius: 25px;
 
-    @include for-device(mobile) {
-        padding: 0;
-        margin-top: 20px;
-        border-radius: 10px;
-        background-color: unset;
-    }
+	@include for-device(mobile) {
+		padding: 0;
+		margin-top: 20px;
+		border-radius: 10px;
+		background-color: unset;
+	}
 
-    &__list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        column-gap: 60px;
-        row-gap: 50px;
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: 60px;
+		row-gap: 50px;
 
-        @include for-device(tablet) {
-            grid-template-columns: repeat(2, 1fr);
-        }
+		@include for-device(tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 
-        @include for-device(mobile) {
-            grid-template-columns: 1fr;
-            row-gap: 20px;
-        }
-    }
+		@include for-device(mobile) {
+			grid-template-columns: 1fr;
+			row-gap: 20px;
+		}
+	}
 }

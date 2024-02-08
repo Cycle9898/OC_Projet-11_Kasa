@@ -1,30 +1,30 @@
 //Variables
 
-@import './utils/variables';
+@import "./utils/variables";
 
 //Mixins
 
-@import './utils/mixins';
+@import "./utils/mixins";
 
 //global settings
 
-@import './base/global-settings';
+@import "./base/global-settings";
 
 //Components
 
-@import './components/header';
-@import './components/footer';
-@import './components/loading-spinner';
-@import './components/banner';
-@import './components/housing-card';
-@import './components/collapse';
-@import './components/slideshow';
-@import './components/housing-tag';
-@import './components/star-rating';
+@import "./components/header";
+@import "./components/footer";
+@import "./components/loading-spinner";
+@import "./components/banner";
+@import "./components/housing-card";
+@import "./components/collapse";
+@import "./components/slideshow";
+@import "./components/housing-tag";
+@import "./components/star-rating";
 
 //Pages
 
-@import './pages/home';
-@import './pages/about';
-@import './pages/error';
-@import './pages/housing';
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/error";
+@import "./pages/housing";
