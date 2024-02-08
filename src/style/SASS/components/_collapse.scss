@@ -18,6 +18,7 @@
 		img {
 			width: 24px;
 			height: auto;
+			vertical-align: middle;
 
 			@include for-device(mobile) {
 				width: 16px;
