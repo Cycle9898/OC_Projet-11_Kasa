@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/OC_Projet-11_Kasa/static/css/main.08f2d826.css",
-    "main.js": "/OC_Projet-11_Kasa/static/js/main.71ed67cb.js",
+    "main.js": "/OC_Projet-11_Kasa/static/js/main.fd6b8c11.js",
     "static/media/about-banner-bg.jpg": "/OC_Projet-11_Kasa/static/media/about-banner-bg.e54ae93d36cfba861b65.jpg",
     "static/media/home-banner-bg.jpg": "/OC_Projet-11_Kasa/static/media/home-banner-bg.61352a7ae7ebff30e925.jpg",
     "static/media/star-rating.svg": "/OC_Projet-11_Kasa/static/media/star-rating.2eb31c4bd3525abca1bb1ad018e6737a.svg",
@@ -11,10 +11,10 @@
     "static/media/arrow-right.svg": "/OC_Projet-11_Kasa/static/media/arrow-right.88153a5d119c2744ffe34dca1ef843df.svg",
     "static/media/arrow-left.svg": "/OC_Projet-11_Kasa/static/media/arrow-left.19918a1634b1441a25ae0b50e6b1f85b.svg",
     "main.08f2d826.css.map": "/OC_Projet-11_Kasa/static/css/main.08f2d826.css.map",
-    "main.71ed67cb.js.map": "/OC_Projet-11_Kasa/static/js/main.71ed67cb.js.map"
+    "main.fd6b8c11.js.map": "/OC_Projet-11_Kasa/static/js/main.fd6b8c11.js.map"
   },
   "entrypoints": [
     "static/css/main.08f2d826.css",
-    "static/js/main.71ed67cb.js"
+    "static/js/main.fd6b8c11.js"
   ]
 }
