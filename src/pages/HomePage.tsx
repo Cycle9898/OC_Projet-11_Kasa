@@ -6,7 +6,7 @@ import HousingCard from "../components/HousingCard";
 function HomePage() {
 	//Fetch mocked data, error and loading state with custom hook
 	const { dataArray, error, isDataLoading } = useFetchData(
-		"http://localhost:3000/data/logements.json"
+		"data/logements.json"
 	);
 
 	//Banner's title text content

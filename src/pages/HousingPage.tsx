@@ -13,7 +13,7 @@ function HousingPage() {
 
 	//Fetch mocked data, error and loading state with custom hook
 	const { dataArray, error, isDataLoading } = useFetchData(
-		"http://localhost:3000/data/logements.json"
+		"../data/logements.json"
 	);
 
 	//To store current housing data (or undefined if housing ID isn't valid)

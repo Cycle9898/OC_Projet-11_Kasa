@@ -23,37 +23,42 @@ function Layout() {
 }
 
 //Define all routes from Layout component
-const defineRoutes = createBrowserRouter([
+const defineRoutes = createBrowserRouter(
+	[
+		{
+			element: <Layout />,
+			children: [
+				{
+					path: "/",
+					element: <HomePage />
+				},
+				{
+					path: "/housing",
+					element: <Navigate to="/" replace />
+				},
+				{
+					path: "/housing/:housingID",
+					element: <HousingPage />
+				},
+				{
+					path: "/about",
+					element: <AboutPage />
+				},
+				{
+					path: "/error",
+					element: <ErrorPage />
+				},
+				{
+					path: "*",
+					element: <Navigate to="/error" replace />
+				}
+			]
+		}
+	],
 	{
-		element: <Layout />,
-		children: [
-			{
-				path: "/",
-				element: <HomePage />
-			},
-			{
-				path: "/housing",
-				element: <Navigate to="/" replace />
-			},
-			{
-				path: "/housing/:housingID",
-				element: <HousingPage />
-			},
-			{
-				path: "/about",
-				element: <AboutPage />
-			},
-			{
-				path: "/error",
-				element: <ErrorPage />
-			},
-			{
-				path: "*",
-				element: <Navigate to="/error" replace />
-			}
-		]
+		basename: "/OC_Projet-11_Kasa/"
 	}
-]);
+);
 
 function Router() {
 	return <RouterProvider router={defineRoutes} />;
